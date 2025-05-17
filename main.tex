@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+
+% ==== PACKAGES ====
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{lipsum} % for dummy text
+
+% ==== FONT SETUP ====
+\renewcommand{\familydefault}{\sfdefault} % Sans serif font (e.g., Helvetica)
+\linespread{1.5} % Line spacing
+
+% ==== HEADER/FOOTER ====
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Your Report Title}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% ==== SECTION FORMATTING ====
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% ==== TITLE INFO ====
+\title{My Big Report}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% ==== COVER PAGE ====
+\input{coverpage}
+
+% ==== TABLE OF CONTENTS ====
+\newpage
+\tableofcontents
+\newpage
+
+% ==== SECTIONS ====
+\input{introduction}
+\input{software_overview}
+\input{conclusion}
+
+\end{document}
